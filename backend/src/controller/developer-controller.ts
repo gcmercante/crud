@@ -6,7 +6,17 @@ export class DeveloperController {
 
     async getAll(query) {
         if(Object.keys(query).length) {
-            return this.devRepository.find(query);
+            const sqlQuery = this.devRepository.createQueryBuilder("developer");
+            let count = 0;
+            Object.entries(query).forEach(([key, value]) => {
+                if(count === 0) {
+                    sqlQuery.where(`developer.${key} = "${value}"`)
+                    count++;
+                } else {
+                    sqlQuery.orWhere(`developer.${key} = "${value}"`)
+                }
+            });
+            return sqlQuery.getMany();
         }
         return this.devRepository.find();
     }

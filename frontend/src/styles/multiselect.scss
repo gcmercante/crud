@@ -1,0 +1,32 @@
+#multiselect {
+    > select {
+        border: 1px solid #e2e2e2;
+        border-radius: 0 5px 5px 0;
+        height: 32px;
+        padding: 5px;
+        background-color: #fff;
+        color: #696969;
+    }
+    > div {
+        max-width: 200px;
+        min-width: 200px;
+        flex-direction: column;
+        padding: 5px;
+        border: 1px solid #e2e2e2;
+        border-radius: 5px;
+        background-color: #fff;
+        position: fixed;
+        transform: translateX(-168px);
+        > label {
+            padding: 5px;
+        }
+        > span {
+            padding: 5px;
+        }
+
+        .separator {
+            border-bottom: 1px solid #e2e2e2;
+            margin: 5px 0;
+        }
+    }
+}

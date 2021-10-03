@@ -1,4 +1,5 @@
 import * as express from 'express';
+import * as cors from 'cors';
 import { createConnection } from 'typeorm';
 
 import Router from './router';
@@ -10,6 +11,8 @@ createConnection().then(() => {
     const port = process.env.PORT;
     const app = express();
     
+    app.use(cors());
+
     app.use(express.json());
     
     app.listen(port);

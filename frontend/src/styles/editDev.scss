@@ -1,0 +1,52 @@
+#edit-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .edit-content {
+        min-width: 400px;
+        max-width: 400px;
+        margin: 50px auto;
+        flex: 1 0 auto;
+
+        > div {
+            font: 500 22px 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 32px;
+            input, select {
+                height: 50px;
+                border-radius: 8px;
+                padding: 0 16px;
+                background: #FFF;
+                border: 1px solid #262626;
+                color: #696969;
+                font: 300 16px 'Roboto', sans-serif;
+            }
+
+            button {
+                height: 50px;
+                border-radius: 8px;
+                font: 500 16px 'Roboto', sans-serif;
+                border: 1px solid #a8a8a8;
+                color: #696969;
+                margin-bottom: 20px;
+                padding: 8px;
+                color: #696969;
+                cursor: pointer;
+                transition: filter 0.8s;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
+
+            button, input, select {
+                width: 100%;
+                margin: 8px 0;
+            }
+        }
+    }
+}

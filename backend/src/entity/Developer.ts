@@ -21,8 +21,4 @@ export class Developer {
 
     @Column("date")
     datanascimento: Date;
-
-    @Index()
-    @Column({ unique: true })
-    cpf: string;
 }
