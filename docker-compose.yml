@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: frontend-crud
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    network_mode: host
+    restart: unless-stopped
+  backend:
+    container_name: backend-crud
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    network_mode: host
+    restart: unless-stopped

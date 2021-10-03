@@ -7,7 +7,6 @@ export function Footer() {
         <footer>
             <span>
                 &copy; 2021 CRUD by Gabriel Mercante <br />
-                Projeto CRUD realizado como teste técnico para a vaga de desenvolvedor
             </span>
             <div>
                 <a href="https://github.com/gcmercante"><FontAwesomeIcon icon={["fab", "github"]}/></a>
